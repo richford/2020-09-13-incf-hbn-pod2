@@ -1,0 +1,80 @@
+<section data-menu-title="Community QC">
+  <h1>Community science QC</h1>
+</section>
+
+<section>
+  <h2>Challenge</h2>
+  <div class="row vspace">
+    <div class="two-col">
+      <ul>
+        <li>We have the expert-rated subset. Now what?</li>
+        <li>The size of the HBN makes expert QC prohibitve for the full dataset.</li>
+        <li>We would like to obtain QC scores for future releases.</li>
+      </ul>
+    </div>
+    <div class="two-col imgcite" style="padding-top: 20px;">
+      <iframe src="https://giphy.com/embed/FoH28ucxZFJZu" width="650" height="650" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+      <cite>One of our expert raters (<a href="https://giphy.com/gifs/titanic-FoH28ucxZFJZu">via GIPHY</a>)</cite>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Solution</h2>
+  <p>Community scientists amplify expert QC ratings</p>
+  <embed
+    title="Fibr community science app"
+    width="1800"
+    height="600"
+    src="https://fibr.dev/#/">
+  </embed>
+  <div style="text-align: left;">
+    <ul>
+      <li>
+        We created a web-app that presents views of b=0 and
+        directionally-encoded FA maps for a pass/fail decision for
+        1,653 HBN subjects.
+      </li>
+      <li>
+        374 community scientists provided 587,778 ratings for a mean of > 200
+        ratings per subject.
+      </li>
+      <li>
+        133 new co-authors!
+      </li>
+      <li>
+        More generally, this is a two-tiered rating protocol:
+        <ul>
+          <li>Low volume, high burden tier (experts)</li>
+          <li>High volume, low burden tier (community)</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>Amplifying expert scores from Fibr raters</h2>
+  <div style="text-align: left;">
+    <ul>
+      <li>
+        We trained a gradient boosting model to predict expert scores based on
+        both Fibr ratings and automated QSIPrep metrics.
+      </li>
+      <li>
+        This outperformed a model trained on only the QSIPrep metrics,
+        demonstrating the added value of the community science raters.
+      </li>
+    </ul>
+  </div>
+  <div class="row">
+    <div class="two-col">
+      <img src="./img/fibr-rating-scatter-plot.png" width="1200" align="middle"
+          alt="Scatterplots of fibr ratings with expert scores.">
+    </div>
+    <div class="two-col">
+      <img src="./img/xgb_roc_curve.png" width="1200" align="middle"
+          alt="ROC AUC curves for various expert QC prediction models.">
+    </div>
+  </div>
+</section>

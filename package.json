@@ -1,0 +1,21 @@
+{
+  "name": "2019-ohbm-software-demo",
+  "version": "1.0.0",
+  "description": "This presentation describes the AFQ software suite and is designed as a software demonstration to accompany poster presentations at the 2019 OHBM conference.",
+  "homepage": "https://github.com/richford/2019-ohbm-software-demo",
+  "bugs": "https://github.com/richford/2019-ohbm-software-demo/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/richford/2019-ohbm-software-demo.git"
+  },
+  "author": "Adam Richie-Halford",
+  "license": "CC-BY-4.0",
+  "dependencies": {
+    "@fortawesome/fontawesome-free-webfonts": "1.0.8",
+    "devicons": "1.8.0",
+    "reveal.js": "3.6.0",
+    "reveal.js-menu": "1.1.2",
+    "reveal_external": "1.3.0"
+  },
+  "private": true
+}

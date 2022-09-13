@@ -1,0 +1,73 @@
+<section data-menu-title="NN QC">
+  <h1>Deep learning QC</h1>
+</section>
+
+<section>
+  <h2>Challenge</h2>
+  <div class="text-left vspace">
+    <ul>
+      <li>We lack fibr ratings for 483 subjects in this release.</li>
+      <li>We don't want to rely on our army of swipers for future releases.</li>
+    </ul>
+  </div>
+  <div class="row">
+    <div class="col-25 imgcite" style="padding-top: 20px;">
+      <iframe src="https://giphy.com/embed/7f6H777BOLe0CKRR4N" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+      <cite><a href="https://giphy.com/gifs/7f6H777BOLe0CKRR4N">via GIPHY</a></cite>
+    </div>
+
+    <div class="col-25 imgcite" style="padding-top: 20px;">
+      <iframe src="https://giphy.com/embed/f8ywYgttpGzzVPH5AO" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+      <cite><a href="https://giphy.com/gifs/moodman-f8ywYgttpGzzVPH5AO">via GIPHY</a></cite>
+    </div>
+
+    <div class="col-25 imgcite" style="padding-top: 20px;">
+      <iframe src="https://giphy.com/embed/26tno5f6B0AwsTC9O" width="480" height="475" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+      <cite><a href="https://giphy.com/gifs/justin-old-man-swipe-swiping-26tno5f6B0AwsTC9O">via GIPHY</a></cite>
+    </div>
+
+    <div class="col-25 imgcite" style="padding-top: 20px;">
+      <iframe src="https://giphy.com/embed/5tLtEKu7sePSM" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+      <cite><a href="https://giphy.com/gifs/obama-text-michelle-obama-5tLtEKu7sePSM">via GIPHY</a></cite>
+    </div>
+  </div>
+  <div>
+    <p>Our community raters!</p>
+  </div>
+</section>
+
+<section>
+  <h2>Solution</h2>
+  <p class="vspace">Train a deep learning model to predict QC scores from the imaging alone</p>
+  <div class="row">
+    <div class="two-col" style="display: flex; align-items: flex-end;">
+      <img src="./img/dl_model_start.png" width="425" align="middle"
+          alt="Convolutional neural network architecture (part 1)">
+    </div>
+    <div class="two-col">
+      <img src="./img/dl_model_end.png" width="425" align="middle"
+          alt="Convolutional neural network architecture (part 2)">
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Deep learning loss curves</h2>
+  <p>Loss stabilizes after ~20 epochs, for both and imaging only model and a model with imaging and QC metric input.</p>
+  <div class="row fragment current-visible">
+    <div class="two-col" style="align-items: center;">
+      <ul><li>without QSIPrep metrics</li></ul>
+      <img src="./img/dl_learning_curve_without_qc.png" width="450" align="middle"
+          alt="Deep learning loss curve without auto-QC metrics">
+    </div>
+    <div class="two-col" style="align-items: center;">
+      <ul><li>with QSIPrep metrics</li></ul>
+      <img src="./img/dl_learning_curve_with_qc.png" width="450" align="middle"
+          alt="Deep learning loss curve with auto-QC metrics">
+    </div>
+  </div>
+  <div class="fragment">
+    <img src="./img/dl_roc_auc_curve.png" width="900" align="middle"
+        alt="Deep learning model ROC curve.">
+  </div>
+</section>

@@ -1,0 +1,110 @@
+<section data-menu-title="HBN">
+  <h1>Healthy Brain Network (HBN)</h1>
+</section>
+
+<section>
+  <h2>The HBN study</h2>
+  <div class="row vspace">
+    <div class="col-15">
+      <img class="logo" src="./img/child-mind-institute-hbn-logo.jpg" width="500" align="middle"
+          alt="Healthy Brain Network logo">
+    </div>
+    <div class="col-85" style="text-align: left;">
+      <ul>
+        <li>a landmark pediatric mental health study,</li>
+        <li>an ongoing initiative collecting MRI and clinical assessment data from 10,000 NYC area adolescents (ages 5-21),</li>
+        <li>at four sites: RU, CBIC, CUNY, SI</li>
+        <li>Includes a broad range of psychiatric, behavioral, cognitive, and lifestyle information from both healthy controls and children with a range of disorders.</li>
+        <li>openly available on FCP-INDI</li>
+        <li>For further details, see</li>
+        <ul>
+          <li>Data descriptor:
+            <a href="https://doi.org/10.1038/sdata.2017.181">
+              Alexander et al. An open resource for transdiagnostic research in pediatric mental health and learning disorders. Sci Data 4, 170181 (2017).
+            </a>
+          </li>
+          <li>Scientific data portal
+            <a href="http://fcon_1000.projects.nitrc.org/indi/cmi_healthy_brain_network/index.html">
+              http://fcon_1000.projects.nitrc.org/indi/cmi_healthy_brain_network/index.html
+            </a>
+          </li>
+        </ul>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Challenge</h2>
+  <div class="text-left">
+    <ul>
+      <li>Data was BIDS-ish, which is a euphemism for not BIDS-compliant.</li>
+      <li>No publicly available preprocessed dMRI.</li>
+      <li>No quality measures.</li>
+    </ul>
+  </div>
+  <div class="imgcite" style="padding-top: 20px;">
+    <iframe src="https://giphy.com/embed/YUG7qlbCeRutqL1jPU" width="900" height="675" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+    <cite><a href="https://giphy.com/gifs/reaction-YUG7qlbCeRutqL1jPU">via GIPHY</a></cite>
+  </div>
+</section>
+
+<section>
+  <h2>Solution</h2>
+  <div class="row vspace">
+    <div class="two-col">
+      <ul>
+        <li>BIDS-curate</li>
+        <li>Preprocess with QSIPrep</li>
+      </ul>
+    </div>
+    <div class="two-col">
+      <ul>
+        <li>Perform two-tiered QC</li>
+        <li>Train a QC model to generalize to future releases</li>
+        <li>Host on FCP-INDI</li>
+      </ul>
+    </div>
+  </div>
+  <embed
+    title="HBN-POD2 data flow"
+    width="1800"
+    height="700"
+    src="./img/hbn-pod2-sankey.html">
+  </embed>
+  <p>
+    TLDR: Preprocessing large datasets is hard. Do it once and share!
+  </p>
+</section>
+
+<section>
+  <h2>Data Access</h2>
+  <div class="row vspace">
+    <div class="col-13">
+      <div class="imgcite" style="padding-top: 20px;">
+        <iframe src="https://giphy.com/embed/4JCWtwL4vM2aTkHdNw" width="624" height="345" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+        <cite><a href="https://giphy.com/gifs/snl-saturday-night-live-season-47-4JCWtwL4vM2aTkHdNw">via GIPHY</a></cite>
+      </div>
+    </div>
+    <div class="col-23">
+      <h4>Imaging data</h4>
+      <ul class="text-left">
+        <li>
+          In Amazon S3 bucket: s3://fcp-indi/data/Projects/HBN/BIDS_curated/<br>
+          <pre class="text-left"><code>aws s3 ls s3://fcp-indi/data/Projects/HBN/BIDS_curated/</code></pre>
+        </li>
+        <li>
+          Or use DataLad<br>
+          <pre class="text-left"><code>datalad clone git@github.com:nrdg/HBN-POD2.git</code></pre>
+        </li>
+      </ul>
+      <h4 class="vspace">Phenotypical data</h4>
+      <ul class="text-left">
+        <li>Age, sex, and handedness are publicly available</li>
+        <li>All other HBN phenotypic data are protected by a data usage agreement</li>
+        <li><a href="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fsdata.2017.181/MediaObjects/41597_2017_Article_BFsdata2017181_Fig1_HTML.jpg?as=webp">Click here for an overview chart</a></li>
+        <li><a href="http://fcon_1000.projects.nitrc.org/indi/cmi_healthy_brain_network/File/_pheno/Assessment_List_Jan2019.xlsx">Click here to download a comprehensive list of assessments</a></li>
+      </ul>
+    </div>
+  </div>
+</section>

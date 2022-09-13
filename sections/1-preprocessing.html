@@ -1,0 +1,48 @@
+<section data-menu-title="dMRI preprocessing">
+  <h1>dMRI preprocessing</h1>
+</section>
+
+<section>
+  <h2>Challenge</h2>
+  <p>Complexity and lack of standardization of preprocessing can induce bias in interpretation of dMRI.</p>
+  <div class="row">
+    <div class="imgcite col-23">
+      <img src="./img/pitfalls_orient_bvector.jpg" height="800" alt="Consequences of failing to reorient the b-vector in dMRI">
+      <cite>
+        <a href="https://doi.org/10.1002/mrm.21890">Leemans and Jones (2009), Magnetic Resonance in Medicine<br>https://doi.org/10.1002/mrm.21890</a>
+      </cite>
+    </div>
+    <div class="imgcite col-13">
+      <img src="./img/pitfalls_axis_flip.png" height="800" alt="Consequences of bvec axis flip in dMRI">
+      <cite>
+        <a href="https://doi.org/10.1038/s41598-018-34940-4">Aganj (2018), Scientific Reports<br>https://doi.org/10.1038/s41598-018-34940-4</a>
+      </cite>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Solution</h2>
+  <div class="row">
+    <div class="col-60" style="margin: auto; text-align:left;">
+      <p>Automatically apply best practices for dMRI preprocessing using QSIPrep:</p>
+      <ul>
+        <li>Robust</li>
+        <li>Reproducible</li>
+        <li>Interrogable "glass box" architecture</li>
+        <li>packaged as a BIDS App</li>
+      </ul>
+      <p>
+        <a href="https://doi.org/10.1038/s41592-021-01185-5">
+          Cieslak et al. QSIPrep: an integrative platform for preprocessing and reconstructing diffusion MRI data. Nat Methods 18, 775–778 (2021).
+        </a>
+      </p>
+    </div>
+    <div class="col-40", style="margin: auto;">
+      <img src="./img/qsiprep-workflow.png" height="850" alt="The qsiprep preprocessing workflow">
+    </div>
+  </div>
+  <p>
+    TLDR: Diffusion preprocessing is hard. Use QSIPrep to do it right!
+  </p>
+</section>

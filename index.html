@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- Presentation metadata -->
+    <title>Neuroimaging Quality Control in the HBN-POD2 Dataset</title>
+    <meta name="description" content="This presentation describes the HBN-POD2 dataset.">
+    <meta name="author" content="Adam Richie-Halford">
+    <!-- reveal.js CSS -->
+    <link rel="stylesheet" href="css/reveal.css">
+    <!-- The id attribute must be defined for the reveal.js-menu themes panel -->
+    <link rel="stylesheet" href="css/theme/white.css" id="theme">
+    <!-- Devicons CSS -->
+    <link rel="stylesheet" href="css/devicons.min.css">
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="css/fa-solid.css">
+    <link rel="stylesheet" href="css/fa-regular.css">
+    <link rel="stylesheet" href="css/fa-brands.css">
+    <link rel="stylesheet" href="css/fontawesome.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/custom.css">
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h2>Quality Control in the HBN-POD2 Dataset</h2>
+          <em><h3 style="margin-top:2em; margin-bottom: 3em;">A two-tiered rating protocol<br>for large neuroimaging datasets</h3></em>
+          <p>
+            <span style="padding-right: 4em;">
+              <a style="font-size: 1.5em;" href="http://richiehalford.org">Adam Richie-Halford</a>
+            </span>
+            <span style="padding-right: 2em;">
+              <a href="https://github.com/richford">
+                <i class="fab fa-github"></i>richford
+              </a>
+            </span>
+            <span style="padding-left: 2em;">
+              <a href="mailto:adamrh@stanford.edu">
+                <i class="fas fa-envelope"></i>adamrh@stanford.edu
+              </a>
+            </span>
+          </p>
+          <p>
+            <a href="https://www.brainandeducation.com/"><img class="logo" src="img/bdelab_logo.png" height="125px" alt="eScience logo"></a>
+            <a href="https://www.stanford.edu/"><img class="logo" src="img/stanford_logo.png" height="125px" alt="eScience logo"></a>
+          </p>
+          <p>
+            Follow along at <a href="http://richiehalford.org/2022-09-13-incf-hbn-pod2">http://richiehalford.org/2022-09-13-incf-hbn-pod2</a>
+          </p>
+          <p class="creativecommons">
+            <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+              <i class="fab fa-creative-commons"></i>
+              <i class="fab fa-creative-commons-by"></i>
+            </a>
+            <span class="smaller" style="vertical-align: middle;">
+              This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>
+            </span>
+          </p>
+          <p class="smaller">
+            Built with <a href="https://github.com/keimlink/cookiecutter-reveal.js">cookiecutter-reveal.js</a>, <a href="https://github.com/hakimel/reveal.js">reveal.js</a>, <a href="https://github.com/denehyg/reveal.js-menu">reveal.js-menu</a>, <a href="https://fontawesome.com/">Font Awesome</a> and <a href="https://github.com/vorillaz/devicons">devicons</a>.
+          </p>
+          <aside class="notes" data-markdown>
+            - Hi everyone.
+            - My name is Adam Richie-Halford
+            - Neuroinformatics Postdoc at Stanford University
+            - Today I'm going to give you an overview of the HBN-POD2 project
+          </aside>
+        </section>
+
+        <section id="thanks" data-external="sections/thanks.html"></section>
+        <section id="hbn" data-external="sections/0-hbn.html"></section>
+        <!-- <section id="preprocessing" data-external="sections/1-preprocessing.html"></section> -->
+        <section id="qsiprep-qc" data-external="sections/2-qsiprep-qc.html"></section>
+        <section id="fibr-qc" data-external="sections/3-xgb-qc.html"></section>
+        <section id="nn-qc" data-external="sections/4-nn-qc.html"></section>
+        <section id="so-what" data-external="sections/5-so-what.html"></section>
+        <section id="provocations" data-external="sections/6-provocations.html"></section>
+      </div>
+    </div>
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+    <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      Reveal.initialize({
+        width: 1920,
+        height: 1080,
+        margin: 0.1,
+        history: true,
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+          config: 'TeX-AMS_HTML-full'
+        },
+        dependencies: [
+          { src: 'plugin/markdown/marked.js' },
+          { src: 'plugin/markdown/markdown.js' },
+          { src: 'plugin/math/math.js', async: true },
+          { src: 'plugin/notes/notes.js', async: true },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          // Zoom in and out with Alt+click
+          { src: 'plugin/zoom-js/zoom.js', async: true },
+          // { src: 'third_party_plugins/menu.js' },
+          { src: 'node_modules/reveal.js-menu/menu.js' },
+          { src: 'third_party_plugins/external.js', condition: function() { return !!document.querySelector( '[data-external]' ); } },
+        ],
+        menu: {
+          side: 'left',
+          width: 'normal',
+          numbers: false,
+          titleSelector: 'notanelement',
+          useTextContentForMissingTitles: false,
+          hideMissingTitles: true,
+          markers: true,
+          custom: false,
+          themes: true,
+          themesPath: 'css/theme/',
+          transitions: false,
+          openButton: true,
+          openSlideNumber: false,
+          keyboard: true,
+          sticky: false,
+          loadIcons: true
+        }
+      });
+    </script>
+  </body>
+</html>
