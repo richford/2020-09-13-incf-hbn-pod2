@@ -104,6 +104,18 @@ i {
   margin-top: 2em;
 }
 
+.reveal .text-blue {
+  color: #1170aa;
+}
+
+.reveal .text-orange {
+  color: #fc7d0b;
+}
+
+.reveal .tab {
+  margin-left: 2em;
+}
+
 .reveal section p,
 li,
 ul,
@@ -145,7 +157,7 @@ tr {
 }
 
 .reveal pre code {
-  font-size: 1.25em !important;
+  font-size: 1.5em !important;
 }
 
 .reveal .eqcite cite {

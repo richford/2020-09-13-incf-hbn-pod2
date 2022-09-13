@@ -10,7 +10,7 @@
           alt="An HBN participant with an anatomical abnormality.">
     </div>
     <div class="col-60">
-      <div>
+      <div class="fragment current-visible vspace">
         <h4>Question</h4>
         <ul>
           <li>What do we make of this participant?</li>
@@ -26,12 +26,12 @@
             Should we include them in a study of normative brains?
             Probably not.
           </li>
+          <li>But that decision is made on the basis of other criteria, not DWI data quality.</li>
         </ul>
       </div>
-      <div style="margin-top: 1rem;">
+      <div class="fragment current-visible vspace">
         <h4>Lesson</h4>
         <ul>
-          <li>But that decision is made on the basis of other criteria, not DWI data quality.</li>
           <li>QC scores are <u><b>exclusion criteria</b></u>, not inclusion criteria</li>
           <li>No single measurement is suitable as an inclusion criterion, <u><b>by itself</b></u></li>
           <li>
@@ -42,9 +42,7 @@
             </ul>
           </li>
         </ul>
-      </div>
-      <div style="margin-top: 1rem;">
-        <h4>Provocation</h4>
+        <h4 class="vspace">Provocation</h4>
         <ul>
           <li>What is the appropriate dimensionality of a quality assessment?</li>
           <li>What is the utility of single, scalar, whole-brain, domain-agnostic QC scores?</li>
@@ -55,21 +53,53 @@
 </section>
 
 <section>
-  <h2>When is a two-tiered protocol appropriate?</h2>
+  <h2>When is a multi-tiered protocol appropriate?</h2>
   <div class="row vspace">
     <div class="two-col">
       <h4>Pros</h4>
       <ul>
         <li>Supplies enough data to CNN QC model</li>
+        <div class="fragment tab">
+          <p>
+            But we can use less data hungry models.
+            <br>
+            But we can ask more of our expert raters.
+          </p>
+        </div>
         <li>Engages public in neuroimaging research</li>
+        <div class="fragment tab">
+          <p>Yes, but many of our community raters came from neuroscience labs.</p>
+        </div>
       </ul>
     </div>
     <div class="two-col">
       <h4>Cons</h4>
       <ul>
         <li>Burdensome to collect</li>
+        <div class="fragment tab">
+          <p>For whom? This is a tradeoff between rater burden vs. study
+          coordinator burden</p>
+        </div>
         <li>Violates some data usage agreements (e.g. ABCD)</li>
+        <div class="fragment tab">
+          <p>But only for community raters. The high-volume raters can also have
+          DUCs.</p>
+        </div>
       </ul>
     </div>
+  </div>
+  <div class="fragment vspace">
+    <h4>Lesson</h4>
+    <ul>
+      <li>
+        Naively, multi-tiered rating is appropriate when the extra data
+        generated is worth the administrative burden of adding another tier.
+      </li>
+      <li>"More is different," even with data.
+        <br>
+        <cite>~ Anderson, P. W. (1972). Science, 177(4047), 393-396.</cite>
+      </li>
+      <li>The Swipes framework reduces the burden of adding another tier.</li>
+    </ul>
   </div>
 </section>
